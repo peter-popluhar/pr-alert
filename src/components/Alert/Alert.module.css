@@ -1,0 +1,116 @@
+/* Alert color variables */
+:root {
+  --alert-border: #FF8A4C;
+  --alert-background: #FDF2F2;
+  --alert-text: #9E1C15;
+  --alert-cta-text: #FFFFFF;
+  --alert-cta-bg: #DE2C18;
+  --alert-cta-bg-hover: #B03D2B;
+  --alert-focus: #B43232;
+  --alert-close-color: #B43232;
+}
+
+/* Block */
+.alert {
+  position: relative;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--alert-border);
+  background-color: var(--alert-background);
+  text-align: left;
+  max-width: 744px;
+}
+
+/* Elements */
+.alert__heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.alert__heading-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--alert-text);
+  font-family: 'Inter', sans-serif;
+  line-height: 22px;
+  font-optical-sizing: auto;
+}
+
+.alert__copy {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--alert-text);
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+}
+
+.alert__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--alert-cta-text);
+  background-color: var(--alert-cta-bg);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.alert__cta:hover {
+  background-color: var(--alert-cta-bg-hover);
+}
+
+.alert__cta:focus-visible {
+  outline: 2px solid var(--alert-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alert__cta {
+    transition: none;
+  }
+}
+
+.alert__cta-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.alert__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--alert-close-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alert__close {
+    transition: none;
+  }
+}
+
+.alert__close:focus-visible {
+  outline: 2px solid var(--alert-focus);
+  outline-offset: 2px;
+}

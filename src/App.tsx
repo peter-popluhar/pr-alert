@@ -1,28 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+import { Alert } from "./components/Alert";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>Vite + React</h1>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main>
+      <Alert
+        heading='Alert heading'
+        copy="Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content."
+        cta={{
+          ctaCopy: "View more",
+          ctaAction: () => console.log("CTA clicked"),
+        }}
+        onAlertClose={() => console.log("Alert closed")}
+      />
+    </main>
+  );
 }
 
 export default App
